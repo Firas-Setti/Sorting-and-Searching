@@ -1,0 +1,19 @@
+Algorithm Cards
+
+VAR
+deck: Array of integer[];
+a,b,card:integer;
+
+BEGIN
+
+For a from 0 to deck.lenght-1 step 1 DO
+ card:= deck[a];
+ b:= a-1;
+  WHILE  b >= 0  and  deck[b] > card THEN
+   deck[b+1]:= deck[b];
+   b:= b-1;
+  END WHILE;
+ deck[b+1]:= card;
+END FOR;
+
+END.
